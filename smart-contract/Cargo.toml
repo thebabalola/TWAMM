@@ -1,0 +1,55 @@
+[package]
+name = "twamm-stylus"
+version = "0.1.0"
+edition = "2021"
+
+
+
+# [dependencies]
+# # Arbitrum Stylus core dependencies
+# stylus-sdk = { git = "https://github.com/OffchainLabs/stylus-sdk-rs", tag = "v0.1.0" }
+# stylus-proc-macro = { git = "https://github.com/OffchainLabs/stylus-sdk-rs", tag = "v0.1.0" }
+
+[dependencies]
+stylus-sdk  = { git = "https://github.com/OffchainLabs/stylus-sdk-rs", branch = "main" }
+stylus-proc = { git = "https://github.com/OffchainLabs/stylus-sdk-rs", branch = "main", package = "stylus-proc" }
+
+
+# Cryptography and math
+primitive-types = { version = "0.12", features = ["serde"] }
+uint = "0.9"
+arrayvec = "0.7"
+
+# Safe math and utilities
+num-traits = "0.2"
+num-derive = "0.3"
+
+# Error handling
+thiserror = "1.0"
+
+# Serialization (optional)
+serde = { version = "1.0", features = ["derive"], optional = true }
+
+# Arbitrum-specific dependencies
+
+
+[dev-dependencies]
+# Testing dependencies
+proptest = "1.0"
+
+# Cargo configuration for Stylus
+[package.metadata.stylus]
+entrypoint = "twamm_hook"
+
+# Rust toolchain configuration
+[workspace.metadata.stylus]
+optimization = "z"
+
+# Ensure we compile for WASM
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+# Feature flags
+[features]
+default = []
+std = ["serde", "primitive-types/std"]
