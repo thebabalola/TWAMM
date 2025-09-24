@@ -12,9 +12,11 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
-              <Image src={"/manna-logo.png"} alt="Manna logo" width={28} height={28} className="sm:w-8 sm:h-8"/>
-              <span className="text-lg sm:text-xl font-bold text-[#144489]">
-                Manna <span className="hidden sm:inline">(만나)</span>
+              <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-sm">TW</span>
+              </div>
+              <span className="text-lg sm:text-xl font-bold text-[#1a1a2e]">
+                TWAMM <span className="hidden sm:inline">Stylus</span>
               </span>
             </Link>
           </div>
@@ -23,15 +25,15 @@ export default function Header() {
           <nav className="hidden md:flex items-center space-x-8">
             <Link 
               href="/" 
-              className="text-gray-700 hover:text-[#144489] font-medium transition-colors"
+              className="text-gray-700 hover:text-[#1a1a2e] font-medium transition-colors"
             >
               Home
             </Link>
             <Link 
               href="/user-profile" 
-              className="text-gray-700 hover:text-[#144489] font-medium transition-colors"
+              className="text-gray-700 hover:text-[#1a1a2e] font-medium transition-colors"
             >
-              Profile
+              Trading
             </Link>
           </nav>
           

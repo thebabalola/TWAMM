@@ -10,18 +10,20 @@ interface FooterProps {
 
 export default function Footer({ scrollToSection }: FooterProps) {
   return (
-    <footer className="bg-[#144489] text-white">
+    <footer className="bg-[#1a1a2e] text-white">
       <div className="max-w-6xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo and Description */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <Image src="/manna-logo.png" alt="Manna logo" width={32} height={32} />
-              <span className="text-xl font-bold">Manna (만나)</span>
+              <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-sm">TW</span>
+              </div>
+              <span className="text-xl font-bold">TWAMM Stylus</span>
             </div>
             <p className="text-gray-300 text-sm leading-relaxed mb-4">
-              Bridging global passion to Korean creativity through instant, transparent KRW-S payments. 
-              Supporting Korean webtoon artists, musicians, streamers, and educators worldwide.
+              Institutional-grade DeFi trading that eliminates MEV and reduces price impact through time-weighted execution. 
+              Built on Arbitrum Stylus for maximum efficiency and security.
             </p>
           </div>
 
@@ -32,15 +34,15 @@ export default function Footer({ scrollToSection }: FooterProps) {
               <li>
                 <Link 
                   href="/user-profile"
-                  className="text-gray-300 hover:text-[#EFAC20] transition-colors"
+                  className="text-gray-300 hover:text-cyan-400 transition-colors"
                 >
-                  Live Demo
+                  Trading Interface
                 </Link>
               </li>
               <li>
                 <button 
                   onClick={() => scrollToSection('roadmap')}
-                  className="text-gray-300 hover:text-[#EFAC20] transition-colors"
+                  className="text-gray-300 hover:text-cyan-400 transition-colors"
                 >
                   Roadmap
                 </button>
@@ -48,15 +50,15 @@ export default function Footer({ scrollToSection }: FooterProps) {
               <li>
                 <Link 
                   href="/user-profile"
-                  className="text-gray-300 hover:text-[#EFAC20] transition-colors"
+                  className="text-gray-300 hover:text-cyan-400 transition-colors"
                 >
-                  User Profile
+                  Start Trading
                 </Link>
               </li>
               <li>
                 <button 
                   onClick={() => scrollToSection('market')}
-                  className="text-gray-300 hover:text-[#EFAC20] transition-colors"
+                  className="text-gray-300 hover:text-cyan-400 transition-colors"
                 >
                   Market Opportunity
                 </button>
@@ -70,10 +72,10 @@ export default function Footer({ scrollToSection }: FooterProps) {
             <ul className="space-y-2 text-sm">
               <li>
                 <a 
-                  href="https://github.com/thebabalola/manna"
+                  href="https://github.com/thebabalola/TWAMM"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center space-x-2 text-gray-300 hover:text-[#EFAC20] transition-colors"
+                  className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors"
                 >
                   <Github size={16} />
                   <span>GitHub Repository</span>
@@ -81,24 +83,24 @@ export default function Footer({ scrollToSection }: FooterProps) {
               </li>
               <li>
                 <a 
-                  href="https://docs.google.com/presentation/d/1qKJidCy1NT8JviqDgs9dH36ehSE499nY/edit?usp=sharing&ouid=100528488557506058575&rtpof=true&sd=true"
+                  href="#"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center space-x-2 text-gray-300 hover:text-[#EFAC20] transition-colors"
+                  className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors"
                 >
                   <FileText size={16} />
-                  <span>Pitch Deck</span>
+                  <span>Documentation</span>
                 </a>
               </li>
               <li>
                 <a 
-                  href="https://docs.google.com/document/d/1I5fVrMsMLdSgmz3cI8YoEI8o7y8vWkBMGKT31-908u8/edit?usp=sharing"
+                  href="#"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center space-x-2 text-gray-300 hover:text-[#EFAC20] transition-colors"
+                  className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors"
                 >
                   <BookOpen size={16} />
-                  <span>Concept Document</span>
+                  <span>Technical Specs</span>
                 </a>
               </li>
             </ul>
@@ -109,7 +111,7 @@ export default function Footer({ scrollToSection }: FooterProps) {
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="text-center">
             <p className="text-gray-400 text-sm">
-              © 2025 Manna (만나). All rights reserved.
+              © 2025 TWAMM Stylus. All rights reserved.
             </p>
           </div>
         </div>
