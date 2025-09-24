@@ -1,4 +1,4 @@
-use primitive_types::U256;
+use stylus_sdk::alloy_primitives::U256;
 use crate::errors::TWAMMError;
 
 pub fn safe_add(a: U256, b: U256) -> Result<U256, TWAMMError> {
